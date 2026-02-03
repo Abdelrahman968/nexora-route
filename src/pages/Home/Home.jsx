@@ -143,7 +143,7 @@ function Home() {
         <section className="relative w-full overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
 
-          <div className="relative max-w-7xl mx-auto px-4 py-24 sm:py-32">
+          <div className="relative max-w-7xl mx-auto px-4 py-24 sm:py-32 z-50">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div className="text-center lg:text-left">

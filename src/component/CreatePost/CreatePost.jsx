@@ -117,6 +117,19 @@ function CreatePost() {
     }
   };
 
+  // Handle textarea keydown to allow Enter for new lines
+  const handleKeyDown = e => {
+    // Allow Shift+Enter or just Enter for new line
+    if (e.key === 'Enter' && !e.shiftKey) {
+      // If you want Ctrl+Enter to submit instead:
+      // if (e.ctrlKey) {
+      //   e.preventDefault();
+      //   handleCreatePost(e);
+      // }
+      // For now, just allow normal Enter behavior
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -160,7 +173,8 @@ function CreatePost() {
                 <textarea
                   value={body}
                   onChange={e => setBody(e.target.value)}
-                  placeholder="Write something interesting..."
+                  onKeyDown={handleKeyDown}
+                  placeholder="Write something interesting...&#10;You can add links like: https://example.com&#10;Use hashtags like: #React #WebDevelopment&#10;Press Enter for new line"
                   rows={8}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none transition-all"
                 />
@@ -264,6 +278,9 @@ function CreatePost() {
                     <li>• Keep your content appropriate and safe</li>
                     <li>• Image size should not exceed 5MB</li>
                     <li>• Supported formats: JPG, PNG, GIF, WebP</li>
+                    <li>• Press Enter to create new lines in your post</li>
+                    <li>• Links will be automatically clickable</li>
+                    <li>• Use #hashtags to categorize your content</li>
                   </ul>
                 </div>
               </div>
@@ -325,6 +342,32 @@ function CreatePost() {
                   </h4>
                   <p className="text-xs text-gray-600 dark:text-gray-400">
                     Share your genuine thoughts and experiences
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
+                  <span className="text-2xl">🔗</span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-800 dark:text-white">
+                    Add Links
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    Share URLs - they'll become clickable automatically
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-pink-100 dark:bg-pink-900/30 p-2 rounded-lg">
+                  <span className="text-2xl">#️⃣</span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-800 dark:text-white">
+                    Use Hashtags
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    Tag your posts with relevant #hashtags
                   </p>
                 </div>
               </div>

@@ -140,6 +140,23 @@ function Explore() {
     });
   };
 
+  const formatPostBody = text => {
+    if (!text) return '';
+
+    return text
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\n/g, '<br />')
+      .replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium break-all">$1</a>'
+      )
+      .replace(
+        /#(\w+)/g,
+        '<span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline">#$1</span>'
+      );
+  };
+
   // Toggle comments visibility
   const toggleComments = postId => {
     setExpandedComments(prev => ({
@@ -532,9 +549,12 @@ function Explore() {
 
                       {/* Post Body */}
                       <div className="px-5 pb-4">
-                        <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
-                          {post.body}
-                        </p>
+                        <div
+                          className="text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap wrap-break-word"
+                          dangerouslySetInnerHTML={{
+                            __html: formatPostBody(post.body),
+                          }}
+                        />
                       </div>
 
                       {post.image && (
@@ -718,7 +738,7 @@ function Explore() {
                                               </div>
                                             )}
                                           </div>
-                                          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                                          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">
                                             {comment.content}
                                           </p>
                                         </div>
