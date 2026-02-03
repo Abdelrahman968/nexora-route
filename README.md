@@ -36,10 +36,10 @@
 ### ✨ Why Nexora?
 
 - 🚀 **Modern Architecture**: Built with React 19 for optimal performance
-- 🎨 **Beautiful UI**: Clean and intuitive interface
+- 🎨 **Beautiful UI**: Clean and intuitive interface with HeroUI and Tailwind CSS
 - 🔐 **Secure**: Authentication and authorization built-in
 - 📱 **Responsive**: Works seamlessly on all devices
-- ⚡ **Fast**: Optimized for speed and performance
+- ⚡ **Fast**: Optimized for speed and performance with Vite
 
 ---
 
@@ -77,7 +77,9 @@
 ### 🎨 UI/UX
 - ✅ Modern and clean interface
 - ✅ Responsive design for all devices
-- ✅ Custom styling with CSS
+- ✅ HeroUI components for polished UI
+- ✅ Tailwind CSS for styling
+- ✅ Framer Motion animations
 - ✅ User-friendly navigation
 
 ---
@@ -85,15 +87,30 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React 19** - Latest version with improved performance
-- **Vite** - Fast build tool and development server
-- **React Router** - For navigation
-- **Axios** - HTTP client for API requests
-- **CSS3** - Modern styling
+- **React 19.2.0** - Latest version with improved performance
+- **Vite 7.2.4** - Fast build tool and development server
+- **React Router DOM 7.13.0** - For navigation
+- **Axios 1.13.4** - HTTP client for API requests
+
+### UI & Styling
+- **Tailwind CSS 4.1.18** - Utility-first CSS framework
+- **HeroUI/React 2.8.8** - Modern UI component library
+- **Framer Motion 12.29.2** - Animation library
+
+### Forms & Validation
+- **React Hook Form 7.71.1** - Performant form handling
+
+### Additional Libraries
+- **React Icons 5.5.0** - Icon library
+- **React Helmet Async 2.0.5** - Document head management
 
 ### Backend API
 - **Route Academy API** - RESTful API
 - **Base URL**: `https://linked-posts.routemisr.com`
+
+### Development Tools
+- **ESLint 9.39.1** - Code linting
+- **TypeScript Types** - Type definitions for React
 
 ---
 
@@ -138,6 +155,22 @@ Make sure you have the following installed:
    
    Navigate to `http://localhost:5173` (Vite default port)
 
+### Available Scripts
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run ESLint
+npm run lint
+```
+
 ### Build for Production
 
 ```bash
@@ -147,6 +180,49 @@ yarn build
 ```
 
 The build files will be generated in the `dist` folder.
+
+---
+
+## 📦 Package Information
+
+### Project Details
+- **Name**: social-route
+- **Version**: 0.0.0
+- **Type**: module
+- **Private**: true
+
+### Dependencies
+
+#### Core Libraries
+- `react: ^19.2.0` - UI library
+- `react-dom: ^19.2.0` - React DOM renderer
+- `react-router-dom: ^7.13.0` - Routing library
+
+#### UI Components & Styling
+- `@heroui/react: ^2.8.8` - UI component library
+- `tailwindcss: ^4.1.18` - CSS framework
+- `@tailwindcss/vite: ^4.1.18` - Tailwind CSS Vite plugin
+- `framer-motion: ^12.29.2` - Animation library
+- `react-icons: ^5.5.0` - Icon library
+
+#### Forms & Data
+- `react-hook-form: ^7.71.1` - Form management
+- `axios: ^1.13.4` - HTTP client
+
+#### SEO & Utilities
+- `react-helmet-async: ^2.0.5` - Document head manager
+
+### Dev Dependencies
+
+- `vite: ^7.2.4` - Build tool
+- `@vitejs/plugin-react: ^5.1.1` - React plugin for Vite
+- `eslint: ^9.39.1` - Linter
+- `@eslint/js: ^9.39.1` - ESLint JavaScript config
+- `eslint-plugin-react-hooks: ^7.0.1` - React Hooks linting
+- `eslint-plugin-react-refresh: ^0.4.24` - React Refresh linting
+- `globals: ^16.5.0` - Global identifiers
+- `@types/react: ^19.2.5` - React TypeScript types
+- `@types/react-dom: ^19.2.3` - React DOM TypeScript types
 
 ---
 
@@ -564,6 +640,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [React Documentation](https://react.dev/)
+- [Vite](https://vitejs.dev/) for blazing fast build tool
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first CSS
+- [HeroUI](https://www.heroui.com/) for beautiful components
+- [Framer Motion](https://www.framer.com/motion/) for animations
 - [Route Academy](https://documenter.getpostman.com/view/5709532/2sA3JT4Jzs) for providing the API
 - [Netlify](https://www.netlify.com/) for hosting
 - All contributors who helped with this project
