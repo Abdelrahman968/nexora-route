@@ -2,6 +2,7 @@
 
 <div align="center">
 
+<<<<<<< HEAD
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-4F46E5?style=for-the-badge&logo=netlify&logoColor=white)](https://nexora-route.netlify.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abdelrahman968/nexora-route)
@@ -14,6 +15,21 @@
 
 ---
 
+=======
+
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-4F46E5?style=for-the-badge&logo=netlify&logoColor=white)](https://nexora-route.netlify.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abdelrahman968/nexora-route)
+
+**A modern social media platform built with React 19**
+
+[Live Demo](https://nexora-route.netlify.app/) • [Report Bug](https://github.com/Abdelrahman968/nexora-route/issues) • [Request Feature](https://github.com/Abdelrahman968/nexora-route/issues)
+
+</div>
+
+---
+
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ## 📋 Table of Contents
 
 - [About The Project](#about-the-project)
@@ -45,14 +61,20 @@
 ## 🌟 Features
 
 ### 👤 User Management
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - ✅ User registration and authentication
 - ✅ Profile settings and customization
 - ✅ Password management
 - ✅ User avatar support
 
 ### 📝 Posts & Content
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - ✅ Create, read, update, and delete posts
 - ✅ Image upload and sharing
 - ✅ Post timeline/feed (Explore page)
@@ -60,14 +82,20 @@
 - ✅ Real-time post updates
 
 ### 💬 Social Features
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - ✅ Messages system
 - ✅ Notifications center
 - ✅ User interactions
 - ✅ Comments on posts
 
 ### 📱 Pages & Navigation
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - ✅ Home page with hero section
 - ✅ About page
 - ✅ Contact page
@@ -78,7 +106,10 @@
 - ✅ Smooth scroll to top functionality
 
 ### 🎨 UI/UX
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - ✅ Modern and clean interface
 - ✅ Responsive design for all devices
 - ✅ HeroUI components for polished UI
@@ -91,34 +122,52 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **React 19.2.0** - Latest version with improved performance
 - **Vite 7.2.4** - Fast build tool and development server
 - **React Router DOM 7.13.0** - For navigation
 - **Axios 1.13.4** - HTTP client for API requests
 
 ### UI & Styling
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Tailwind CSS 4.1.18** - Utility-first CSS framework
 - **HeroUI/React 2.8.8** - Modern UI component library
 - **Framer Motion 12.29.2** - Animation library
 
 ### Forms & Validation
+<<<<<<< HEAD
 
 - **React Hook Form 7.71.1** - Performant form handling
 
 ### Additional Libraries
 
+=======
+- **React Hook Form 7.71.1** - Performant form handling
+
+### Additional Libraries
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **React Icons 5.5.0** - Icon library
 - **React Helmet Async 2.0.5** - Document head management
 
 ### Backend API
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Route Academy API** - RESTful API
 - **Base URL**: `https://linked-posts.routemisr.com`
 
 ### Development Tools
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **ESLint 9.39.1** - Code linting
 - **TypeScript Types** - Type definitions for React
 
@@ -129,21 +178,30 @@
 ### Prerequisites
 
 Make sure you have the following installed:
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Node.js** (v18 or higher)
 - **npm** or **yarn**
 
 ### Installation
 
 1. **Clone the repository**
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
    ```bash
    git clone https://github.com/Abdelrahman968/nexora-route.git
    cd nexora-route
    ```
 
 2. **Install dependencies**
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
    ```bash
    npm install
    # or
@@ -151,15 +209,23 @@ Make sure you have the following installed:
    ```
 
 3. **Set up environment variables** (if needed)
+<<<<<<< HEAD
 
    Create a `.env` file in the root directory:
 
+=======
+   
+   Create a `.env` file in the root directory:
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
    ```env
    VITE_API_URL=https://linked-posts.routemisr.com
    ```
 
 4. **Start the development server**
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
    ```bash
    npm run dev
    # or
@@ -167,7 +233,11 @@ Make sure you have the following installed:
    ```
 
 5. **Open your browser**
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
    Navigate to `http://localhost:5173` (Vite default port)
 
 ### Available Scripts
@@ -201,7 +271,10 @@ The build files will be generated in the `dist` folder.
 ## 📦 Package Information
 
 ### Project Details
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Name**: social-route
 - **Version**: 0.0.0
 - **Type**: module
@@ -210,13 +283,19 @@ The build files will be generated in the `dist` folder.
 ### Dependencies
 
 #### Core Libraries
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - `react: ^19.2.0` - UI library
 - `react-dom: ^19.2.0` - React DOM renderer
 - `react-router-dom: ^7.13.0` - Routing library
 
 #### UI Components & Styling
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - `@heroui/react: ^2.8.8` - UI component library
 - `tailwindcss: ^4.1.18` - CSS framework
 - `@tailwindcss/vite: ^4.1.18` - Tailwind CSS Vite plugin
@@ -224,12 +303,18 @@ The build files will be generated in the `dist` folder.
 - `react-icons: ^5.5.0` - Icon library
 
 #### Forms & Data
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - `react-hook-form: ^7.71.1` - Form management
 - `axios: ^1.13.4` - HTTP client
 
 #### SEO & Utilities
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - `react-helmet-async: ^2.0.5` - Document head manager
 
 ### Dev Dependencies
@@ -249,7 +334,10 @@ The build files will be generated in the `dist` folder.
 ## 📡 API Documentation
 
 ### Base URL
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```
 https://linked-posts.routemisr.com
 ```
@@ -257,7 +345,10 @@ https://linked-posts.routemisr.com
 ### Authentication Endpoints
 
 #### Register User
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 POST /users/signup
 Content-Type: application/json
@@ -273,7 +364,10 @@ Content-Type: application/json
 ```
 
 #### Login
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 POST /users/signin
 Content-Type: application/json
@@ -285,7 +379,10 @@ Content-Type: application/json
 ```
 
 #### Change Password
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 PATCH /users/change-password
 Authorization: Bearer {token}
@@ -300,21 +397,30 @@ Content-Type: application/json
 ### Posts Endpoints
 
 #### Get All Posts
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 GET /posts
 Authorization: Bearer {token}
 ```
 
 #### Get User Posts
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 GET /posts?userId={userId}
 Authorization: Bearer {token}
 ```
 
 #### Create Post
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 POST /posts
 Authorization: Bearer {token}
@@ -327,7 +433,10 @@ Content-Type: multipart/form-data
 ```
 
 #### Update Post
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 PUT /posts/{postId}
 Authorization: Bearer {token}
@@ -339,7 +448,10 @@ Content-Type: application/json
 ```
 
 #### Delete Post
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 DELETE /posts/{postId}
 Authorization: Bearer {token}
@@ -348,14 +460,20 @@ Authorization: Bearer {token}
 ### Comments Endpoints
 
 #### Get Post Comments
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 GET /comments?post={postId}
 Authorization: Bearer {token}
 ```
 
 #### Create Comment
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 POST /comments
 Authorization: Bearer {token}
@@ -368,7 +486,10 @@ Content-Type: application/json
 ```
 
 #### Update Comment
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 PUT /comments/{commentId}
 Authorization: Bearer {token}
@@ -380,7 +501,10 @@ Content-Type: application/json
 ```
 
 #### Delete Comment
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 DELETE /comments/{commentId}
 Authorization: Bearer {token}
@@ -389,14 +513,20 @@ Authorization: Bearer {token}
 ### User Profile Endpoints
 
 #### Get User Profile
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 GET /users/profile-data
 Authorization: Bearer {token}
 ```
 
 #### Upload Profile Photo
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```http
 PUT /users/upload-photo
 Authorization: Bearer {token}
@@ -504,7 +634,11 @@ const handleCreatePost = async (content, image) => {
   if (image) {
     formData.append('image', image);
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
   try {
     const response = await createPost(formData);
     console.log('Post created:', response);
@@ -535,7 +669,10 @@ const fetchPosts = async () => {
 ## 📄 Project Pages
 
 ### Main Pages
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Home** (`/`) - Landing page with hero section and main content
 - **Explore** (`/explore`) - Browse all posts from users
 - **My Posts** - View and manage your personal posts
@@ -544,19 +681,28 @@ const fetchPosts = async () => {
 - **Settings** (`/settings`) - Manage account preferences
 
 ### Authentication Pages
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **Login** (`/login`) - User authentication
 - **Register** (`/register`) - New user registration
 
 ### Information Pages
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **About** (`/about`) - Learn about the platform
 - **Contact** (`/contact`) - Get in touch
 - **Privacy Policy** (`/privacy`) - Privacy terms and conditions
 - **Licensing** (`/licensing`) - License information
 
 ### Special Pages
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 - **404 Error** - Custom error page for invalid routes
 
 ---
@@ -564,6 +710,7 @@ const fetchPosts = async () => {
 ## 🎨 Screenshots
 
 ### Home Page
+<<<<<<< HEAD
 
 > _Main feed with posts from all users_
 
@@ -574,6 +721,15 @@ const fetchPosts = async () => {
 ### Create Post
 
 > _Create and share new posts with images_
+=======
+> *Main feed with posts from all users*
+
+### User Profile
+> *User profile page with personal posts*
+
+### Create Post
+> *Create and share new posts with images*
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 
 ---
 
@@ -584,16 +740,27 @@ const fetchPosts = async () => {
 The project uses Vite as the build tool. Configuration is in `vite.config.js`:
 
 ```javascript
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 
 export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+<<<<<<< HEAD
     open: true,
   },
 });
+=======
+    open: true
+  }
+})
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 ```
 
 ### API Configuration
@@ -603,8 +770,12 @@ Create an API service file (e.g., `src/services/api.js`):
 ```javascript
 import axios from 'axios';
 
+<<<<<<< HEAD
 const API_URL =
   import.meta.env.VITE_API_URL || 'https://linked-posts.routemisr.com';
+=======
+const API_URL = import.meta.env.VITE_API_URL || 'https://linked-posts.routemisr.com';
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 
 const api = axios.create({
   baseURL: API_URL,
@@ -615,20 +786,33 @@ const api = axios.create({
 
 // Add token to requests
 api.interceptors.request.use(
+<<<<<<< HEAD
   config => {
+=======
+  (config) => {
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
     const token = localStorage.getItem('token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
+<<<<<<< HEAD
   error => Promise.reject(error)
+=======
+  (error) => Promise.reject(error)
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
 );
 
 // Handle responses
 api.interceptors.response.use(
+<<<<<<< HEAD
   response => response,
   error => {
+=======
+  (response) => response,
+  (error) => {
+>>>>>>> cbd9214f21c76c9a847660ed6533548b98f40222
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       window.location.href = '/login';
