@@ -82,7 +82,7 @@ function Register() {
       console.log('Response:', response.data);
       setSuccess(true);
       reset();
-      Navigate('/login');
+      navigate('/login');
     } catch (error) {
       console.error('Login error:', error.message);
       setError(parseServerError(error.response?.data?.error));

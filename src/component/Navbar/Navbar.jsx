@@ -164,7 +164,7 @@ function Navbar() {
                   onClick={() => setIsDropdownOpen(prev => !prev)}
                 />
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 shadow-lg rounded-lg z-50 border-2 border-gray-800 overflow-hidden p-2 bg-[#e5e7eb] dark:bg-[#1E2939]">
+                  <div className="absolute right-0 mt-2 w-48 shadow-lg rounded-lg z-9999 border-2 border-gray-800 overflow-hidden p-2 bg-[#e5e7eb] dark:bg-[#1E2939]">
                     <Link
                       to="/settings"
                       className="flex items-center gap-2 px-4 py-3  rounded-lg transition-colors hover:bg-[#d1d5db] dark:hover:bg-[#16202D]"
@@ -215,7 +215,7 @@ function Navbar() {
       </nav>
 
       {isMenuOpen && (
-        <div className="md:hidden border-b border-gray-800 px-4 py-4">
+        <div className="md:hidden border-b border-gray-800 px-4 py-4 z-50">
           <div className="flex flex-col gap-3">
             <div className="relative mb-3">
               <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 z-10" />
@@ -248,15 +248,19 @@ function Navbar() {
             </Link>
 
             <div className="flex items-center gap-3">
-              <button className="flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-colors text-left bg-[#e5e7eb] dark:bg-[#1E2939] cursor-pointer active:scale-105">
-                <FaPlus className="text-xl" />
-                <span>Create</span>
-              </button>
+              <Link to="/create-post" className='w-full'>
+                <button className="flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-colors text-left bg-[#e5e7eb] dark:bg-[#1E2939] cursor-pointer active:scale-105">
+                  <FaPlus className="text-xl" />
+                  <span>Create</span>
+                </button>
+              </Link>
 
-              <button className="flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-colors text-left bg-[#e5e7eb] dark:bg-[#1E2939] cursor-pointer active:scale-105">
-                <FaCommentAlt className="text-xl" />
-                <span>Messages</span>
-              </button>
+              <Link to="/messages" className='w-full'>
+                <button className="flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-colors text-left bg-[#e5e7eb] dark:bg-[#1E2939] cursor-pointer active:scale-105">
+                  <FaCommentAlt className="text-xl" />
+                  <span>Messages</span>
+                </button>
+              </Link>
             </div>
 
             <div className="flex items-center justify-between px-4 py-3 bg-[#e5e7eb] dark:bg-[#1E2939] rounded-lg">

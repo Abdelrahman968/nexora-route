@@ -13,7 +13,7 @@ import {
   FaEdit,
   FaTrash,
 } from 'react-icons/fa';
-import { Button } from '@heroui/react';
+import { Button, Pagination } from '@heroui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { IoOpenOutline } from 'react-icons/io5';
@@ -70,7 +70,7 @@ function Explore() {
   };
 
   // Fetch posts
-  const fetchPosts = async (page = null) => {
+  const fetchPosts = async (page = 1) => {
     try {
       setIsLoading(true);
       setError('');
@@ -82,28 +82,21 @@ function Explore() {
         return;
       }
 
-      if (page === null) {
-        const initialResponse = await axios.get(
-          `https://linked-posts.routemisr.com/posts?limit=50&page=1`,
-          {
-            headers: {
-              token,
-            },
-          }
-        );
-        page = initialResponse.data.paginationInfo.numberOfPages;
-      }
-
       const response = await axios.get(
-        `https://linked-posts.routemisr.com/posts?limit=50&page=${page}`,
+        `https://linked-posts.routemisr.com/posts`,
         {
+          params: {
+            page,
+            limit: 10,
+            sort: '-createdAt',
+          },
           headers: {
             token,
           },
         }
       );
 
-      const reversedPosts = [...response.data.posts].reverse();
+      const reversedPosts = [...response.data.posts];
       setPosts(reversedPosts);
       setCurrentPage(response.data.paginationInfo.currentPage);
       setTotalPages(response.data.paginationInfo.numberOfPages);
@@ -767,11 +760,11 @@ function Explore() {
                           color="primary"
                           variant="flat"
                           size="sm"
-                          disabled={currentPage === totalPages}
-                          onClick={() => handlePageChange(currentPage + 1)}
+                          disabled={currentPage === 1}
+                          onPress={() => handlePageChange(currentPage - 1)}
                           className="bg-linear-to-r from-indigo-600 to-purple-600 text-white disabled:from-gray-300 disabled:to-gray-400"
                         >
-                          Newer Posts
+                          Back
                         </Button>
 
                         <div className="flex items-center gap-2">
@@ -784,11 +777,11 @@ function Explore() {
                           color="primary"
                           variant="flat"
                           size="sm"
-                          disabled={currentPage === 1}
-                          onClick={() => handlePageChange(currentPage - 1)}
+                          disabled={currentPage === totalPages}
+                          onPress={() => handlePageChange(currentPage + 1)}
                           className="bg-linear-to-r from-indigo-600 to-purple-600 text-white disabled:from-gray-300 disabled:to-gray-400"
                         >
-                          Older Posts
+                          Next
                         </Button>
                       </div>
                     </div>
