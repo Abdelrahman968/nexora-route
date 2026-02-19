@@ -5,6 +5,7 @@ import {
   ModalBody,
   useDisclosure,
   Spinner,
+  addToast,
 } from '@heroui/react';
 import {
   FaImage,
@@ -16,6 +17,8 @@ import {
   FaChevronDown,
   FaTrash,
   FaTimes,
+  FaExclamationCircle,
+  FaCheckCircle,
 } from 'react-icons/fa';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
@@ -222,6 +225,22 @@ function CreatePost() {
       queryClient.invalidateQueries(['posts']);
       queryClient.invalidateQueries(['userPosts']);
       handleClose();
+      addToast({
+        color: 'success',
+        title: 'Post',
+        description: 'Post created successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
+    },
+    onError: () => {
+      addToast({
+        color: 'danger',
+        title: 'Post',
+        description: 'Post creation failed',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 

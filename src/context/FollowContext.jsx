@@ -6,6 +6,8 @@ import {
   useInfiniteQuery,
 } from '@tanstack/react-query';
 import axios from 'axios';
+import { addToast } from '@heroui/react';
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_BASE_URL;
 
@@ -68,7 +70,23 @@ function FollowContextProvider({ children }) {
         return next;
       });
     },
+    onSuccess: () => {
+      addToast({
+        color: 'success',
+        title: 'Follow',
+        description: 'Operation completed successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
+    },
     onError: (_err, userId) => {
+      addToast({
+        color: 'danger',
+        title: 'Follow',
+        description: 'Operation failed',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
       setFollowedIds(prev => {
         const next = new Set(prev);
         if (next.has(userId)) {

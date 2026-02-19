@@ -6,6 +6,8 @@ import {
 } from '@tanstack/react-query';
 import axios from 'axios';
 import { AuthContext } from './AuthContext';
+import { addToast } from '@heroui/react';
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_BASE_URL;
 
@@ -60,6 +62,23 @@ function CommentProvider({ children }) {
       invalidateComments(postId);
       queryClient.invalidateQueries({ queryKey: ['post', postId] });
       queryClient.invalidateQueries({ queryKey: ['homeFeed'] });
+
+      addToast({
+        color: 'success',
+        title: 'Comment Created',
+        description: 'Comment created successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
+    },
+    onError: () => {
+      addToast({
+        color: 'danger',
+        title: 'Comment Creation Failed',
+        description: 'Failed to create comment',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 

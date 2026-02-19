@@ -2,6 +2,8 @@ import { createContext, useContext, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { addToast } from '@heroui/react';
+import { FaCheckCircle } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_BASE_URL;
 
@@ -33,6 +35,13 @@ function PostContextProvider({ children }) {
   });
 
   const fetchHomeFeedType = type => {
+    addToast({
+      color: 'success',
+      title: `Feed ${type}`,
+      description: `Feed ${type} changed successfully`,
+      icon: <FaCheckCircle />,
+      duration: 5000,
+    });
     setFeedType(type);
   };
 

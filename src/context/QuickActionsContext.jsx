@@ -2,6 +2,8 @@ import React, { useContext, useCallback } from 'react';
 import { useQueryClient, useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { AuthContext } from './AuthContext';
+import { addToast } from '@heroui/react';
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_BASE_URL;
 
@@ -25,6 +27,22 @@ function QuickActionsProvider({ children }) {
       queryClient.invalidateQueries({ queryKey: ['homeFeed'] });
       queryClient.invalidateQueries({ queryKey: ['post', postId] });
       queryClient.invalidateQueries({ queryKey: ['postLikes', postId] });
+      addToast({
+        color: 'success',
+        title: 'Like',
+        description: 'Operation completed successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
+    },
+    onError: () => {
+      addToast({
+        color: 'danger',
+        title: 'Like',
+        description: 'Operation failed',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 
@@ -58,6 +76,22 @@ function QuickActionsProvider({ children }) {
       queryClient.invalidateQueries({ queryKey: ['homeFeed'] });
       queryClient.invalidateQueries({ queryKey: ['post', postId] });
       queryClient.invalidateQueries({ queryKey: ['bookmarks'] });
+      addToast({
+        color: 'success',
+        title: 'Bookmark',
+        description: 'Operation completed successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
+    },
+    onError: () => {
+      addToast({
+        color: 'danger',
+        title: 'Bookmark',
+        description: 'Operation failed',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 

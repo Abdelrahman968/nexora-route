@@ -20,6 +20,7 @@ import {
   FaUserFriends,
   FaLock,
   FaUser,
+  FaExclamationCircle,
 } from 'react-icons/fa';
 import { MdVerified } from 'react-icons/md';
 import {
@@ -39,6 +40,7 @@ import {
   useDisclosure,
   RadioGroup,
   Radio,
+  addToast,
 } from '@heroui/react';
 import SEO from '../SEO/SEO';
 import ProfilePostCard from '../ProfilePostCard/ProfilePostCard';
@@ -166,10 +168,23 @@ function Profile() {
       setSelectedCoverFile(null);
       setCoverPreview(null);
       setCoverPrivacy('public');
+      addToast({
+        color: 'success',
+        title: 'Cover',
+        description: 'Cover uploaded successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
     },
     onError: error => {
       console.error('Error uploading cover:', error);
-      alert(error.response?.data?.message || 'Failed to upload cover photo');
+      addToast({
+        color: 'danger',
+        title: 'Cover',
+        description: 'Failed to upload cover photo',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 
@@ -187,10 +202,23 @@ function Profile() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries(['profileInfo']);
+      addToast({
+        color: 'success',
+        title: 'Cover',
+        description: 'Cover deleted successfully',
+        icon: <FaCheckCircle />,
+        duration: 5000,
+      });
     },
     onError: error => {
       console.error('Error deleting cover:', error);
-      alert(error.response?.data?.message || 'Failed to delete cover photo');
+      addToast({
+        color: 'danger',
+        title: 'Cover',
+        description: 'Failed to delete cover photo',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 
@@ -198,11 +226,23 @@ function Profile() {
     const file = e.target.files?.[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) {
-        alert('File size must be less than 5MB');
+        addToast({
+          color: 'danger',
+          title: 'Cover',
+          description: 'File size must be less than 5MB',
+          icon: <FaExclamationCircle />,
+          duration: 5000,
+        });
         return;
       }
       if (!file.type.startsWith('image/')) {
-        alert('Please select an image file');
+        addToast({
+          color: 'danger',
+          title: 'Cover',
+          description: 'Please select an image file',
+          icon: <FaExclamationCircle />,
+          duration: 5000,
+        });
         return;
       }
       setSelectedCoverFile(file);
@@ -254,7 +294,13 @@ function Profile() {
     },
     onError: error => {
       console.error('Error uploading photo:', error);
-      alert(error.response?.data?.message || 'Failed to upload profile photo');
+      addToast({
+        color: 'danger',
+        title: 'Photo',
+        description: 'Failed to upload profile photo',
+        icon: <FaExclamationCircle />,
+        duration: 5000,
+      });
     },
   });
 
@@ -262,11 +308,23 @@ function Profile() {
     const file = e.target.files?.[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) {
-        alert('File size must be less than 5MB');
+        addToast({
+          color: 'danger',
+          title: 'Photo',
+          description: 'File size must be less than 5MB',
+          icon: <FaExclamationCircle />,
+          duration: 5000,
+        });
         return;
       }
       if (!file.type.startsWith('image/')) {
-        alert('Please select an image file');
+        addToast({
+          color: 'danger',
+          title: 'Photo',
+          description: 'Please select an image file',
+          icon: <FaExclamationCircle />,
+          duration: 5000,
+        });
         return;
       }
       setSelectedPhotoFile(file);
