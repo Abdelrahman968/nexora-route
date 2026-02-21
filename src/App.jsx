@@ -41,6 +41,8 @@ import Features from './pages/Features/Features';
 import Pricing from './pages/Pricing/Pricing';
 import Updates from './pages/Updates/Updates';
 import ComingSoon from './pages/ComingSoon/ComingSoon';
+import { Offline } from 'react-detect-offline';
+import { FaWifi } from 'react-icons/fa';
 
 const queryClient = new QueryClient();
 
@@ -160,13 +162,23 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <HeroUIProvider>
-      <QueryClientProvider client={queryClient}>
-        <ToastContextProvider>
-          <RouterProvider router={router} />
-        </ToastContextProvider>
-      </QueryClientProvider>
-    </HeroUIProvider>
+    <>
+      <HeroUIProvider>
+        <QueryClientProvider client={queryClient}>
+          <ToastContextProvider>
+            <RouterProvider router={router} />
+          </ToastContextProvider>
+        </QueryClientProvider>
+      </HeroUIProvider>
+      <Offline>
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+          <div className="bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3">
+            <FaWifi className="text-xl" />
+            <span>You are offline. Please check your connection.</span>
+          </div>
+        </div>
+      </Offline>
+    </>
   );
 }
 

@@ -142,7 +142,7 @@ function Notifications() {
                 </div>
               </div>
 
-              {unreadCount > 0 && (
+              {unreadCount && (
                 <Button
                   size="lg"
                   className="bg-linear-to-r from-pink-600 to-indigo-600 text-white font-bold shadow-lg hover:scale-105 transition-all"
